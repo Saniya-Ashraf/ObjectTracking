@@ -10,8 +10,8 @@ LINE_END = sv.Point(320, 480)
 
 
 def main():
-    line_counter = sv.LineZone(start=LINE_START, end=LINE_END)
-    line_annotator = sv.LineZoneAnnotator(thickness=2, text_thickness=1, text_scale=0.5)
+    #line_counter = sv.LineZone(start=LINE_START, end=LINE_END)
+    #line_annotator = sv.LineZoneAnnotator(thickness=2, text_thickness=1, text_scale=0.5)
     box_annotator = sv.BoxAnnotator(
         thickness=2,
         text_thickness=1,
@@ -41,8 +41,8 @@ def main():
             labels=labels
         )
 
-        line_counter.trigger(detections=detections)
-        line_annotator.annotate(frame=frame, line_counter=line_counter)
+        #line_counter.trigger(detections=detections)
+        #line_annotator.annotate(frame=frame, line_counter=line_counter)
 
         cv2.imshow("yolov8", frame)
 
